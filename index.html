@@ -798,7 +798,7 @@
             <span class="ai-tag">REST API</span>
             <span class="ai-tag">Slack</span>
           </div>
-          <a href="https://github.com/gawadenagesh/n8n-workflows/tree/main/web-content-gen" class="ai-card-link" title="View on GitHub">→</a>
+          <a href="https://github.com/gawadenagesh/n8n-workflows/tree/main/web-content-gen" class="ai-card-link" title="View on GitHub" target="_blank" rel="noopener noreferrer">→</a>
         </div>
       </div>
 
@@ -818,7 +818,7 @@
             <span class="ai-tag">REST API</span>
             <span class="ai-tag">Slack</span>
           </div>
-          <a href="https://github.com/gawadenagesh/n8n-workflows/tree/main/linkedin-post-gen" class="ai-card-link" title="View on GitHub">→</a>
+          <a href="https://github.com/gawadenagesh/n8n-workflows/tree/main/linkedin-post-gen" class="ai-card-link" title="View on GitHub" target="_blank" rel="noopener noreferrer">→</a>
         </div>
       </div>
 
@@ -837,7 +837,7 @@
             <span class="ai-tag">LLaMA</span>
             <span class="ai-tag">Streamlit</span>
           </div>
-          <a href="https://github.com/gawadenagesh/ai-work/tree/main/local-llm-app" class="ai-card-link" title="View on GitHub">→</a>
+          <a href="https://github.com/gawadenagesh/ai-work/tree/main/local-llm-app" class="ai-card-link" title="View on GitHub" target="_blank" rel="noopener noreferrer">→</a>
         </div>
       </div>
 
@@ -859,7 +859,7 @@
             <span class="ai-tag">Gradio</span>
             <span class="ai-tag">Groq</span>
           </div>
-          <a href="https://github.com/gawadenagesh/ai-work/tree/main/llm-app-with-docker" class="ai-card-link" title="View on GitHub">→</a>
+          <a href="https://github.com/gawadenagesh/ai-work/tree/main/llm-app-with-docker" class="ai-card-link" title="View on GitHub" target="_blank" rel="noopener noreferrer">→</a>
         </div>
       </div>
 
@@ -877,7 +877,7 @@
             <span class="ai-tag">MLflow</span>
             <span class="ai-tag">Machine Learning</span>
           </div>
-          <a href="https://github.com/gawadenagesh/ai-work/tree/main/machine-learning/mlops-with-docker" class="ai-card-link" title="View on GitHub">→</a>
+          <a href="https://github.com/gawadenagesh/ai-work/tree/main/machine-learning/mlops-with-docker" class="ai-card-link" title="View on GitHub" target="_blank" rel="noopener noreferrer">→</a>
         </div>
       </div>
 
@@ -1204,12 +1204,6 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-  // Open all anchor links in a new tab
-  document.querySelectorAll('a').forEach(link => {
-    link.target = '_blank';
-    if (!link.rel) link.rel = 'noopener noreferrer';
-  });
 </script>
 </body>
 </html>
