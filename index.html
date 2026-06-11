@@ -86,9 +86,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--border);
     animation: fadeIn 0.6s ease-out;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 
@@ -99,10 +101,11 @@
     color: var(--text-dim);
     text-decoration: none;
     letter-spacing: -0.3px;
+    flex-shrink: 0;
   }
   .logo strong { color: var(--amber); font-weight: 500; }
 
-  .topbar-nav { display: flex; gap: 28px; align-items: center; }
+  .topbar-nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
   .topbar-nav a {
     color: var(--text-muted);
     text-decoration: none;
@@ -111,14 +114,16 @@
     letter-spacing: 0.3px;
     text-transform: uppercase;
     transition: color 0.3s;
+    white-space: nowrap;
   }
   .topbar-nav a:hover { color: var(--text); }
   .topbar-nav .hire-btn {
-    padding: 8px 18px;
+    padding: 8px 16px;
     border: 1px solid var(--amber);
     border-radius: 100px;
     color: var(--amber);
     transition: all 0.3s;
+    flex-shrink: 0;
   }
   .topbar-nav .hire-btn:hover { background: var(--amber); color: var(--bg); }
 
@@ -128,7 +133,7 @@
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 60px;
-    align-items: end;
+    align-items: start;
   }
 
   .hero-intro {
@@ -796,8 +801,33 @@
     .stack-group { padding: 22px 20px 24px; }
     .sec-title { font-size: 30px; }
     .contact-strip h2 { font-size: 32px; }
-    .topbar-nav { gap: 16px; }
-    .topbar-nav a { font-size: 12px; }
+    .topbar { gap: 16px; padding: 14px 0; }
+    .topbar-nav { gap: 14px; }
+    .topbar-nav a { font-size: 11px; }
+    .logo { font-size: 13px; }
+    .topbar-nav .hire-btn { padding: 6px 14px; font-size: 11px; }
+  }
+
+  @media (max-width: 640px) {
+    .topbar { flex-direction: column; align-items: stretch; }
+    .logo { text-align: center; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .topbar-nav { justify-content: center; gap: 12px; padding-top: 8px; }
+    .topbar-nav a { font-size: 10px; }
+    .topbar-nav .hire-btn { padding: 6px 12px; font-size: 10px; }
+    .hero h1 { font-size: 28px; }
+    .hero-desc { font-size: 15px; }
+    .sec-title { font-size: 24px; }
+    .contact-strip h2 { font-size: 24px; }
+  }
+
+  @media (max-width: 480px) {
+    .topbar { gap: 12px; }
+    .topbar-nav { flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .topbar-nav a { font-size: 9px; letter-spacing: 0.2px; }
+    .topbar-nav .hire-btn { padding: 5px 10px; font-size: 9px; }
+    .logo { font-size: 12px; }
+    .hero h1 { font-size: 24px; line-height: 1.1; }
+    .hero-desc { font-size: 14px; }
   }
 </style>
 </head>
